@@ -3,3 +3,6 @@
 
 использовать middleware с инструментами разработчика -
 npm i redux-devtools-extension 
+
+для работы с асинхронным кодом -
+npm i redux-thunk
