@@ -1,5 +1,5 @@
 # React-Redux-Education
 
 
-middleware -
+использовать middleware с инструментами разработчика -
 npm i redux-devtools-extension 
