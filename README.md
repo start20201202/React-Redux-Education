@@ -6,3 +6,5 @@ npm i redux-devtools-extension
 
 для работы с асинхронным кодом -
 npm i redux-thunk
+
+https://www.youtube.com/playlist?list=PL6DxKON1uLOHsBCJ_vVuvRsW84VnqmPp6
