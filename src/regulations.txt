@@ -1,0 +1,50 @@
+установить - npm i redux react-redux
+------------------------
+создать store
+export const store = createStore(reducer)
+получить состояние - getState
+изменить состояние - dispatch
+подписаться на изменинея
+------------------------------
+создать reducer
+//action =(type: '', payload:'')
+payload - нагрузка//
+
+defaulState = {
+    cash: 0,
+}
+reducer = (state=defaulState, action)=>{
+    switch (action, type){
+/тип action(ADD_CASH)/
+case 'ADD_CASH':
+/как action изменяет состояние/
+return {state, cash: state.cash + action.payload}
+case 'GET_CASH':
+return {state, cash: state.cash - action.payload}
+
+        default:
+        return state
+    }
+}
+-----------------------------------
+------------------Reducer закончили---------------------
+--------------------------------------
+оборачиваем App в Provider,
+store с помощью Provider передается в react components
+ <Provider store={store}>
+            <App />
+    </Provider>
+-----------------------------------
+в компоненте создаем dispatch(изменить состояние) с помощью хука useDispatch
+const dispatch = useDispatch()
+получить состояние с помощью useSelector
+const cash = useSelector(state=>state.cash)
+----------------------------
+в return выводим состояние
+<div>{cash}</div>
+<button onClick={()=>addCash(Number(prompt))}>Пополнить счет</button>
+-----------------
+создаем функцию
+const addCash = (cash)=>{
+    dispatch({type: 'ADD_CASH}, payload:cash)
+}
